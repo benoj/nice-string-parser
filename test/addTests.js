@@ -1,4 +1,5 @@
-var assert = require('assert');
+var assert = require('assert'),
+	StringParser = require('../lib/StringParser');
 
 describe('When I add two numbers',function(){
 	it('Then the result is correct',function(){
@@ -33,15 +34,3 @@ describe('when I add two different numbers',function(){
 		assert.equal(result,expectedResult);
 	});
 });
-
-var StringParser = function(output){
-	function parse(inputString){
-		var numbersInString = inputString.split(/[a-f]/);
-		var result = parseInt(numbersInString[0])+parseInt(numbersInString[1]);
-		output.display(result);
-	}
-
-	return{
-		parse:parse
-	};
-};
