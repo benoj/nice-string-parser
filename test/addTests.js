@@ -18,8 +18,8 @@ describe('When I add two numbers',function(){
 	});
 });
 
-describe('when I add two different numbers',function(){
-	it('Then the result is correct',function(){
+describe('When I add multiple numbers',function(){
+	it('Then all the numbers are added',function(){
 		var expectedResult = 3,
 			result;
 
@@ -30,7 +30,7 @@ describe('when I add two different numbers',function(){
 		};
 
 		var stringParser = new StringParser(fakeOutput);
-		stringParser.parse('2a1');
+		stringParser.parse('1a1a1');
 		assert.equal(result,expectedResult);
 	});
 });
