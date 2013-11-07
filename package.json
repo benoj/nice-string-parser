@@ -1,0 +1,26 @@
+{
+        "name": "nice-string-parser",
+        "description": "NICE string parser",
+        "author": "Ben Flowers",
+        "version": "0.0.0",
+  "repository" : { 
+    "type" : "git", 
+    "url" : "https://github.com/benoj/nice-string-parser"
+    },
+        "licenses": [{
+          "type": "MIT"
+        }],
+        "directories": {
+          "lib": "./lib"
+        },
+        "main":  "./lib/sentinaught.js",
+        "dependencies": {
+        },
+  "devDependencies":{
+     "mocha": "*",
+     "assert": "*"
+  },
+  "scripts":{
+  	"test": "./node_modules/mocha/bin/mocha"
+  }
+}
