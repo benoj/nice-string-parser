@@ -34,3 +34,23 @@ describe('when 32a2d2 input',function(){
 		assert.equal(result,expectedResult);
 	});
 });
+
+
+describe('when 500a10b66c32 input',function(){
+	it('Then the result is 17',function(){
+		var expectedResult = 14208,
+			result;
+
+		var fakeOutput = {
+			display: function(displayedResult){
+				result = displayedResult;
+			}
+		};
+
+		var stringParser = new StringParser(fakeOutput);
+		stringParser.parse('500a10b66c32');
+		assert.equal(result,expectedResult);
+	});
+});
+
+
