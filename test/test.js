@@ -17,9 +17,28 @@ describe('When I add two numbers',function(){
 	});
 });
 
+describe('when I add two different numbers',function(){
+	it('Then the result is correct',function(){
+		var expectedResult = 3,
+			result;
+
+		var fakeOutput = {
+			display: function(displayedResult){
+				result = displayedResult;
+			}
+		};
+
+		var stringParser = new StringParser(fakeOutput);
+		stringParser.parse('2a1');
+		assert.equal(result,expectedResult);
+	});
+});
+
 var StringParser = function(output){
-	function parse(){
-		output.display(2);
+	function parse(inputString){
+		var numbersInString = inputString.split(/[a-f]/);
+		var result = parseInt(numbersInString[0])+parseInt(numbersInString[1]);
+		output.display(result);
 	}
 
 	return{
