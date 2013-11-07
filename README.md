@@ -6,7 +6,7 @@ Method:
 
 This solution was implemented using TDD and CI. Starting from the simplest tests and gaining more complexity. (see commit log)
 
-The expression parser was refactored into a POSTFIX parsed solution in order to deal with precidences more cleanly.
+The expression parser was refactored into a POSTFIX parsed solution in order to deal with presciences more cleanly.
 
 Acceptance
 ----------
